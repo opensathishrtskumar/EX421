@@ -10,6 +10,12 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class DataSourceConfiguration {
 
+	/**
+	 * @return
+	 * 
+	 * TODO: configure Entity Manager with Hikari DB
+	 * 
+	 */
 	@Bean(name = "dataSource")
 	@ConfigurationProperties("spring.datasource")
 	public DataSource hikariDataSource() {
