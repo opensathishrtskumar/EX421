@@ -1,0 +1,15 @@
+<routes xmlns="http://camel.apache.org/schema/spring"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="
+       http://activemq.apache.org/camel/schema/spring http://activemq.apache.org/camel/schema/spring/camel-spring.xsd">
+       
+    <!-- config routes here like given below -->   
+       
+	<route id="timexmldsl">
+		<from uri="timer://trigger?period=1h&amp;fixedRate=true" />
+		<transform>
+			<simple>Welcome to xml dsl Timer</simple>
+		</transform>
+		<to uri="direct-vm:timerprinter" />
+	</route>
+	
+</routes>
